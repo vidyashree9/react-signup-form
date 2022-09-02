@@ -54,6 +54,8 @@ const Registration = ():JSX.Element => {
         let isSubmit: boolean = true;
         let requiredFieldError = false;
         let submitErrors = {...formErrors};
+        validateEmail();
+        validatePassword();
         Object.entries(user).forEach(([key,value])=>{
             if(submitErrors[key]?.isError){
                 isSubmit = false;
@@ -102,7 +104,7 @@ const Registration = ():JSX.Element => {
                     {formErrors.email?.errorMessage && (<p data-testid="email-error">{formErrors.email?.errorMessage}</p>)}
                 </div>
                 <div className='signup-field'>
-                    <input type="password" data-testid="password-field" value={user.password} className={formErrors.password?.isError ? 'error': ''} name="password" placeholder="Password*" onChange={(event)=>handleChange(event)} onBlur={()=>validatePassword()}/>
+                    <input type="text" data-testid="password-field" value={user.password} className={formErrors.password?.isError ? 'error': ''} name="password" placeholder="Password*" onChange={(event)=>handleChange(event)} onBlur={()=>validatePassword()}/>
                     {formErrors.password?.errorMessage && 
                         formErrors.password?.errorMessage.split('\n').map((errorMessage: string, index: number)=>{
                         return <p key={index}>{errorMessage}</p>

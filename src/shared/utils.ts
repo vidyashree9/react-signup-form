@@ -7,9 +7,12 @@ const validateEmail = (user:IFormFields):boolean => {
 
 const validatePassword = (user:IFormFields):boolean => {
     const passwordRegex = RegExp("(?=.*[a-z])(?=.*[A-Z]).{8,}");
+    const firstName = user.firstName.toLowerCase();
+    const lastName = user.lastName.toLowerCase();
+    const password = user.password.toLowerCase();
     return (!passwordRegex.test(user.password)
-    || (user.firstName !== "" && (user.password.includes(user.firstName) || user.password.includes(user.firstName.toLowerCase()))) 
-    || ( user.lastName !== "" && (user.password.includes(user.lastName) || user.password.includes(user.lastName.toLowerCase()))))
+    || (user.firstName !== "" && (password.includes(firstName))) 
+    || ( user.lastName !== "" && (password.includes(lastName))))
     && user.password !== "";
 }
 
