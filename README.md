@@ -4,6 +4,9 @@ This Application is a React SignUp Form with validations using react functional 
 
 # Getting Started
 
+npm install
+npm start
+
 ## Available Scripts
 
 In the project directory, you can run:

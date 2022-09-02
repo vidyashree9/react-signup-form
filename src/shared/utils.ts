@@ -15,8 +15,8 @@ const validatePassword = (user:IFormFields):boolean => {
     || ( user.lastName !== "" && (password.includes(lastName))))
     && user.password !== "";
 }
-
-export default {
-   validateEmail,
-   validatePassword
+const validation = {
+    validateEmail,
+    validatePassword
 }
+export default validation;
