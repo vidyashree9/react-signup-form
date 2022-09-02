@@ -1,0 +1,30 @@
+@import "../../assets/variables-colors";
+
+.popup-content {
+    margin: auto;
+    background: $vz-color-whitesmoke;
+    width: 30%;
+    padding: 5px;
+    border-radius:10px;
+}
+
+.modal{
+    padding:25px;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-btn{
+        width:50%;
+    }
+
+    & p.success{
+        color: $brand-success;
+    }
+
+    & p.error {
+        color: $vz-color-red-error;
+    }
+
+}

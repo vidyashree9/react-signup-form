@@ -1,0 +1,78 @@
+@import "../../assets/variables-colors";
+
+.signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $vz-color-light-grey;
+    border-radius: 10px;
+    padding: 25px;
+    width: 420px;
+    margin-top: 5%;
+    box-shadow: 0px 0px 2px 2px $vz-color-light-grey;
+    background-color: $vz-color-whitesmoke;
+
+    &-form-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 400px;
+
+        & h3 {
+            color: $vz-color-orange;
+            margin-bottom: 10px;
+        }
+
+        &-message {
+            font-size: 10px;
+            font-style: italic;
+            margin-left: 0;
+            margin-bottom: 2px;
+            color: #343232;
+        }
+
+        &-requiredError {
+            color: $vz-color-red-error;
+            font-size: 13px;
+            font-style: normal;
+            margin-left: 0px;
+        }
+    }
+
+    &-field {
+        width: 100%;
+        margin-top: 20px;
+
+        & p {
+            font-size: 13px;
+            color: $vz-color-red-error;
+            line-height: 1.1rem;
+        }
+
+        & input {
+            padding: 10px 5px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid $vz-color-light-grey;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $vz-color-grey;
+            }
+
+            &.error {
+                border: 1px solid $vz-color-red-error;
+            }
+
+        }
+    }
+
+    .error-message {
+        color: $vz-color-red-error;
+
+        & span {
+            font-size: 14px;
+            vertical-align: middle;
+        }
+    }
+}
