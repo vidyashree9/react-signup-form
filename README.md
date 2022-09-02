@@ -1,6 +1,6 @@
 # react-signup-form
 
-This Application is a React SignUp Form with validations using react functional components, typescript,Axios for Api calls, Unit tests with Jest, React testing Library and custom css(sass). On sign up a modal pops up with success/error message using reactjs-popup.
+This Application is a React SignUp Form with validations and is featured with react functional components, typescript, Axios for Api calls, Unit tests with Jest, React testing Library and custom css(sass). On sign up a modal pops up with registration success/fail message appears using reactjs-popup library.
 
 # Getting Started
 
@@ -14,7 +14,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+open (http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
